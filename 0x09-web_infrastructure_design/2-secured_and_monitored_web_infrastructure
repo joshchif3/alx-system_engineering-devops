@@ -1,0 +1,63 @@
+https://imgur.com/a/aQ0ZeUH
+
+
+
+
+
+
+Description
+This infrastructure design secures the website www.foobar.com by using firewalls, serving encrypted traffic, and enabling monitoring. It includes a load balancer, web servers, application servers, and a MySQL database with a primary-replica setup.
+
+Infrastructure Components
+3 Servers
+1 Load Balancer (HAProxy)
+2 Web Servers (Nginx)
+2 Application Servers
+1 MySQL Database Server (Primary-Replica setup)
+1 SSL Certificate
+3 Firewalls
+3 Monitoring Clients
+Specifics About This Infrastructure
+Firewalls:
+
+Purpose: Firewalls are added to protect each server by controlling incoming and outgoing network traffic based on predetermined security rules. They help prevent unauthorized access and attacks.
+Placement: Each server (web, application, database) has a dedicated firewall to filter and protect traffic.
+SSL Certificate:
+
+Purpose: An SSL certificate is used to encrypt traffic between the user's browser and the web server, ensuring data integrity and security.
+Implementation: The SSL certificate is installed on the load balancer, allowing it to handle HTTPS requests.
+Monitoring Clients:
+
+Purpose: Monitoring clients collect data on server performance, resource usage, and potential issues. This helps in maintaining the health and efficiency of the infrastructure.
+Tool: Tools like Sumologic or other monitoring services are used to collect and analyze data.
+Data Collection: Monitoring clients are installed on each server to gather logs, metrics, and alerts.
+Load Balancer (HAProxy):
+
+Purpose: The load balancer distributes incoming traffic across multiple web servers to ensure no single server is overwhelmed. It helps in achieving high availability and reliability.
+SSL Termination: SSL termination occurs at the load balancer, which decrypts incoming HTTPS traffic before forwarding it to the web servers.
+Web Servers (Nginx):
+
+Purpose: The web servers handle HTTP requests, serve static content, and pass dynamic content requests to the application servers.
+Application Servers:
+
+Purpose: Application servers process dynamic content, execute application logic, and interact with the database.
+MySQL Database Server (Primary-Replica Setup):
+
+Purpose: The database server stores and manages application data. The primary server handles read and write operations, while the replica server handles read operations to reduce load on the primary server.
+Issues With This Infrastructure
+Terminating SSL at the Load Balancer Level:
+
+Issue: Terminating SSL at the load balancer level means traffic between the load balancer and the web servers is unencrypted. This can be a security risk if the internal network is compromised.
+Single MySQL Server for Writes:
+
+Issue: Having only one MySQL server capable of accepting writes creates a single point of failure for write operations. If the primary server goes down, the application cannot perform any write operations.
+Homogeneous Server Components:
+
+Issue: If all servers have the same components (database, web server, application server), resource contention can occur. Specialized servers for each role can optimize performance and resource utilization.
+Monitoring QPS (Queries Per Second)
+Explanation: To monitor the web server QPS, configure the monitoring tool to track the number of HTTP requests per second. This involves setting up alerts for high QPS values, which may indicate increased traffic or potential DDoS attacks.
+URLs
+GitHub repository: alx-system_engineering-devops
+Directory: 0x09-web_infrastructure_design
+File: 2-secured_and_monitored_web_infrastructure
+This secured and monitored web infrastructure provides enhanced security, encrypted traffic, and monitoring capabilities, but it still has potential issues that need to be addressed for optimal performance and reliability.

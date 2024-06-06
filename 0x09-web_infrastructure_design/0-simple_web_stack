@@ -1,0 +1,55 @@
+https://imgur.com/L1f69qS
+
+
+Description
+This is a simple web infrastructure that hosts the website www.foobar.com on a single server setup. It includes basic components required to serve a web application.
+
+Infrastructure Components
+1 Server
+1 Web Server (Nginx)
+1 Application Server
+1 Set of Application Files (Code Base)
+1 Database (MySQL)
+1 Domain Name (www.foobar.com) configured with a www record that points to your server IP 8.8.8.8
+Specifics About This Infrastructure
+Server:
+
+A server is a powerful computer designed to provide services to other computers or clients over a network. In this case, it hosts the web application, database, and other necessary components.
+Domain Name:
+
+The domain name www.foobar.com is an address that users type in their web browsers to access the website. It provides a human-readable way to locate the server on the internet.
+DNS Record:
+
+The www in www.foobar.com is a CNAME (Canonical Name) record that points to the server's IP address (8.8.8.8). DNS translates the domain name into an IP address, allowing the user's computer to find and connect to the server.
+Web Server (Nginx):
+
+The web server handles HTTP requests from users, serves static content (like HTML, CSS, JavaScript), and acts as a reverse proxy to pass dynamic content requests to the application server.
+Application Server:
+
+The application server processes dynamic content, executes the application code, and interacts with the database to generate responses to user requests.
+Database (MySQL):
+
+The database server stores and manages data for the application. It handles all read and write operations required by the application.
+Communication:
+
+The server communicates with the user's computer over the internet using HTTP/HTTPS protocols. The user's browser sends requests to the server's IP address, and the server responds with the requested resources.
+Issues With This Infrastructure
+Single Point of Failure (SPOF):
+
+The entire application runs on a single server. If this server goes down, the entire website becomes unavailable.
+Downtime During Maintenance:
+
+When maintenance is needed, such as deploying new code or restarting the web server, the website will experience downtime, making it inaccessible to users temporarily.
+Scalability:
+
+This setup cannot handle high traffic efficiently. All requests are processed by a single server, leading to performance bottlenecks as traffic increases.
+Security:
+
+Without proper security measures like firewalls and SSL certificates, the application is vulnerable to attacks. Data transmitted over the network is not encrypted, exposing it to potential interception.
+No Redundancy:
+
+There is no redundancy in this setup. If any component fails (web server, application server, or database), the entire service is impacted.
+No Monitoring:
+
+Without monitoring tools, it is difficult to track the performance and health of the server, making it challenging to detect and address issues proactively.
+URLs
