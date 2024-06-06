@@ -1,4 +1,14 @@
 
+![0-simple_web_stack](https://github.com/joshchif3/alx-system_engineering-devops/assets/122808743/f2032856-57b8-434d-8942-e2bca9893671)
+
+
+![1-distributed_web_infrastructure](https://github.com/joshchif3/alx-system_engineering-devops/assets/122808743/eb4ed693-ad30-4d62-9021-e72b6af1e637)
+
+
+
+![3-scale_up](https://github.com/joshchif3/alx-system_engineering-devops/assets/122808743/c88bf60c-21cc-4e2f-8bea-b3e92520b284)
+
+
 
 
 
