@@ -5,8 +5,8 @@
 ![1-distributed_web_infrastructure](https://github.com/joshchif3/alx-system_engineering-devops/assets/122808743/eb4ed693-ad30-4d62-9021-e72b6af1e637)
 
 
+![2-secured_and_monitored_web_infrastructure](https://github.com/joshchif3/alx-system_engineering-devops/assets/122808743/3d9e1eae-a07e-48dc-914a-2db335d9f7f3)
 
-![3-scale_up](https://github.com/joshchif3/alx-system_engineering-devops/assets/122808743/c88bf60c-21cc-4e2f-8bea-b3e92520b284)
 
 
 
